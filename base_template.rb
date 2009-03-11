@@ -1,5 +1,5 @@
 run "touch public/stylesheets/styles.css"
-run "cp config/database.yml condig/database.yml.example"
+run "cp config/database.yml config/database.yml.example"
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
 
 if yes?("Would you like to create a mysql development database?")
