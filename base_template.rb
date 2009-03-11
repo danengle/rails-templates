@@ -2,28 +2,8 @@ run "touch public/stylesheets/styles.css"
 run "cp config/database.yml condig/database.yml.example"
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
 
-if yes?("Use mysql for development?")
-  # how do you access the app name from the rails command?
-  app_name = ask("Enter the name of the database to create")
-  file "config/database.yml", <<-END
-development:
-  adapter: mysql
-  database: #{app_name}_development
-  username: root
-  password:
-  host: localhost
-
-test:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  timeout: 5000
-
-production:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  timeout: 5000
-END
-  run "mysqladmin -u root create #{app_name}_development"
+if yes?("Would you like to create a mysql development database?")
+  run "mysqladmin -u root create #{@root.split('/').last}_development"
 end
 
 run "echo TODO > README"
