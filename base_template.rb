@@ -13,7 +13,7 @@ plugin "will_paginate", :git => "git://github.com/engled68/will_paginate.git"
 plugin "rspec", :git => "git://github.com/dchelimsky/rspec.git"
 plugin "rspec-rails", :git => "git://github.com/dchelimsky/rspec-rails.git"
 plugin "aasm", :git => "git://github.com/rubyist/aasm.git"
-plugin "restful-authentication", :git => "git://github.com/technoweenie/restful-authentication.git"
+plugin "restful-authentication", :git => "git://github.com/engled68/restful-authentication.git"
 plugin "exception_notification", :git => "git://github.com/rails/exception_notification.git"
 
 if yes?("Do you want to use query_reviewer?")
